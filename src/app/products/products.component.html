@@ -1,0 +1,11 @@
+<h2>Product List</h2>
+<ul>
+  <li *ngFor="let product of products$ | async">
+    <strong>{{ product.name }}</strong> - {{ product.description }}
+    <ul>
+      <li>Price: {{ product.price }}</li>
+      <li>Available: {{ product.available ? 'Yes' : 'No' }}</li>
+      <li>Likes: {{ product.likes.length }}</li>
+    </ul>
+  </li>
+</ul>
